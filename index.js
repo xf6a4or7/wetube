@@ -10,6 +10,13 @@ const handleListening = (req, res) => {
 
 app.listen(PORT, handleListening);
 
+const betweenHome = (req, res, next) => {
+  console.log("Between");
+  next();
+};
+
+app.use(betweenHome);
+
 const handleHome = (req, res) => {
   res.send("Hello from home");
 };
