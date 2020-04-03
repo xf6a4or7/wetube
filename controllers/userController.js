@@ -1,3 +1,5 @@
+import routes from "../routes";
+
 export const getJoin = (req, res) => res.render("join", { pageTitle: "join" });
 export const postJoin = (req, res) => {
   const {
